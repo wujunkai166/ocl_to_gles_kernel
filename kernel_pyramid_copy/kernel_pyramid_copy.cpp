@@ -206,6 +206,9 @@ void tryComputeShader()
 
     glUnmapBuffer(GL_SHADER_STORAGE_BUFFER);
     glDeleteProgram(computeProgram);
+
+    free(input_bgr);
+    free(output_bgr);
 }
 
 int main(int /*argc*/, char** /*argv*/)

@@ -405,6 +405,14 @@ void tryComputeShader()
 
     glUnmapBuffer(GL_SHADER_STORAGE_BUFFER);
     glDeleteProgram(computeProgram);
+
+    free(input_bgr);
+    free(input_y);
+    free(input_uv);
+    free(output_y);
+    free(output_uv);
+    free(tmp_nv12);
+    free(geo_table);
 }
 
 int main(int /*argc*/, char** /*argv*/)
